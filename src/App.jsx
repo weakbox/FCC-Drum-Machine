@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import './DrumPad.jsx'
 import DrumPad from './DrumPad.jsx';
+import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -61,6 +63,11 @@ function App() {
             />
           </div>
           <div id="display" className="display-container">Display</div>
+        </div>
+        <div className="acknowledgements">
+            <p>Developed for freeCodeCamp's "Front End Development Libraries" course.</p>
+            <a href="https://github.com/weakbox/FCC-Drum-Machine" target="_blank"><FaGithubSquare /></a>
+            <a href="https://linkedin.com/in/weakbox" target="_blank"><FaLinkedin /></a>
         </div>
       </div>
     </>
