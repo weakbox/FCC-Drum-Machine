@@ -1,0 +1,7 @@
+.drum-pad {
+    margin: 0.25em;
+    padding: 2em;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 4px;
+}
