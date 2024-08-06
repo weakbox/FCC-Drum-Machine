@@ -1,21 +1,38 @@
 import { useState } from 'react'
 import './DrumPad.css'
 
-const audioElement = new Audio("https://cdn.freecodecamp.org/testable-projects-fcc/audio/RP4_KICK_1.mp3");
+const getRandomButtonColor = () => {
+  const colors = [
+    "rgb(224, 82, 54)",
+    "rgb(224, 179, 54)",
+    "rgb(60, 189, 38)",
+  ];
+  return(colors[Math.floor(Math.random() * colors.length)]);
+}
 
-const playSample = () => {
-  audioElement.currentTime = 0;
-  audioElement.play().catch(console.error);
-};
+// Use props to set unique features:
+function DrumPad({ id, keyTrigger, url}) {
+  const [count, setCount] = useState(0)
 
-function DrumPad() {
-    const [count, setCount] = useState(0)
+  const audioElement = new Audio(url);
+
+  const playSample = () => {
+    console.log(`Trying to play sample from: ${url}`);
+    audioElement.currentTime = 0;
+    audioElement.play().catch(console.error);
+  };
+
+  return (
+    <>
+      <button 
+        id={id} 
+        className="drum-pad" 
+        onClickCapture={playSample}
+        style={{ backgroundColor: getRandomButtonColor() }}>
+        {keyTrigger}
+      </button>
+    </>
+  )
+}
   
-    return (
-      <>
-        <button className="drum-pad" onClickCapture={playSample}>Kick</button>
-      </>
-    )
-  }
-  
-  export default DrumPad
+export default DrumPad
