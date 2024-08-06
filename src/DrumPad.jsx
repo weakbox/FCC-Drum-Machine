@@ -3,9 +3,10 @@ import './DrumPad.css'
 
 const getRandomButtonColor = () => {
   const colors = [
-    "rgb(224, 82, 54)",
-    "rgb(224, 179, 54)",
-    "rgb(60, 189, 38)",
+    "rgb(255, 71, 71)",
+    "rgb(255, 145, 71)",
+    "rgb(250, 211, 55)",
+    "rgb(87, 217, 48)",
   ];
   return(colors[Math.floor(Math.random() * colors.length)]);
 }
