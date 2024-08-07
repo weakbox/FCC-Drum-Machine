@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import './DrumPad.jsx'
 import DrumPad from './DrumPad.jsx';
@@ -71,7 +70,7 @@ const setDisplayText = (text) => {
 };
 
 const playAudio = (event) => {
-  const clip = audioClips.find((clip) => event.key === clip.keyTrigger.toLowerCase());
+  const clip = audioClips.find((clip) => event.key === clip.keyTrigger.toLowerCase() || event.key === clip.keyTrigger);
 
   if (!clip) { return; }
 
@@ -85,8 +84,6 @@ const playAudio = (event) => {
 };
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div id="drum-machine" className='drum-machine-container' onKeyDown={playAudio}>
       <div className="header-container">
