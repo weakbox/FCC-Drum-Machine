@@ -1,16 +1,19 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .drum-machine-container {
-  background-color: rgb(36, 38, 49);
+  background-color: rgb(71, 74, 87);
   border: 3px solid black;
   width: fit-content;
+  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .header-container {
+  font-family: Techno, sans-serif;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -19,12 +22,7 @@
   padding: 0 4em;
   padding-top: 0.25em;
   color: white;
-}
-
-.header-container p {
-  font-style: italic;
-  font-weight: 900;
-  font-size: large;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 .icon {
@@ -36,36 +34,28 @@
   display: grid;
   grid-template-columns: repeat(3, 6em);
   grid-template-rows: repeat(3, 6em);
+  gap: 0.5rem;
 }
 
 .body-container {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 1em;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 
 .display-container {
-  width: 75%;
-  padding: 2em 0;
-  margin: 1em 0;
-  background-color: white;
-  border-radius: 8px;
-  border: 3px solid black;
+  font-family: digital, sans-serif;
+  font-size: larger;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   text-align: center;
-}
-
-.acknowledgements {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: x-small;
-  text-align: center;
-  margin-bottom: 0.5em;
+  min-width: 10rem;
 }
 
 .acknowledgements a {

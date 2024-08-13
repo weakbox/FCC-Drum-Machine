@@ -10,3 +10,19 @@
   align-items: center;
   justify-content: center;
 }
+
+@font-face {
+  font-family: 'Digital';
+  src: url('./fonts/digital7.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Techno';
+  src: url('./fonts/corpgames.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

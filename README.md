@@ -1,1 +1,7 @@
-freeCodeCamp Front End Development Libraries Project 2: Build a Markdown Previewer
+# freeCodeCamp Drum Machine
+
+Submission for freeCodeCamp's "Front End Development Libraries" course.
+
+To see the tests passing, open the testing widget in the upper-left corner, select "Drum Machine" from the dropdown, and then click the "Run Tests" button.
+
+<img src="./images/interface.jpg">

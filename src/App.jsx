@@ -1,8 +1,6 @@
 import './App.css'
 import './DrumPad.jsx'
 import DrumPad from './DrumPad.jsx';
-import { FaGithubSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
 
 const audioClips = [
   {
@@ -57,6 +55,7 @@ const drawDrumPads = (clips) => {
     return (
       <DrumPad 
         id={clip.id}
+        key={`${clip.id}-${clip.keyTrigger}`}
         keyTrigger={clip.keyTrigger}
         url={clip.url}
       />
@@ -87,16 +86,11 @@ function App() {
   return (
     <div id="drum-machine" className='drum-machine-container' onKeyDown={playAudio}>
       <div className="header-container">
-        <p>React Drum Machine RDX-2024</p>
+        <p>React Drum Machine</p>
       </div>
       <div className="body-container">
         <div className="drum-pad-container">{drawDrumPads(audioClips)}</div>
         <div id="display" className="display-container">Display</div>
-      </div>
-      <div className="acknowledgements">
-          <p>Developed for freeCodeCamp's "Front End Development Libraries" course.</p>
-          <a href="https://github.com/weakbox/FCC-Drum-Machine" target="_blank"><FaGithubSquare /></a>
-          <a href="https://linkedin.com/in/weakbox" target="_blank"><FaLinkedin /></a>
       </div>
     </div>
   )
